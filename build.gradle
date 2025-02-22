@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = "1.8.10"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("com.android.tools.build:gradle:8.4.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+        classpath("com.google.gms:google-services:4.4.2")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("org.jetbrains.kotlin.android")) {
+            project.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+                kotlinOptions {
+                    jvmTarget = "17"
+                }
+            }
+        }
+    }
+}
+
+// Tambahkan konfigurasi properties untuk suppress warning
+gradle.projectsEvaluated {
+    subprojects.each { subproject ->
+        subproject.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+            kotlinOptions.jvmTarget = "17"
+        }
+    }
+}

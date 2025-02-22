@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TranslateActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/kotak2"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/kotak_bahasa" />
+
+    <ImageView
+        android:id="@+id/icon_source_language"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak2"
+        app:layout_constraintStart_toStartOf="@+id/kotak2"
+        app:layout_constraintTop_toTopOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <!-- Bahasa Sumber Text -->
+    <TextView
+        android:id="@+id/text_source_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Bahasa Sumber"
+        android:textColor="@color/ungutua"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak2"
+        app:layout_constraintStart_toEndOf="@+id/icon_source_language"
+        app:layout_constraintTop_toTopOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- Switch Button -->
+    <ImageButton
+        android:id="@+id/btn_switch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_switch"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak2"
+        app:layout_constraintEnd_toEndOf="@+id/kotak2"
+        app:layout_constraintStart_toStartOf="@+id/kotak2"
+        app:layout_constraintTop_toTopOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!--  Target Language -->
+    <ImageView
+        android:id="@+id/icon_target_language"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak2"
+        app:layout_constraintEnd_toStartOf="@+id/text_target_language"
+        app:layout_constraintTop_toTopOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/text_target_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="Bahasa Target"
+        android:textColor="@color/ungutua"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak2"
+        app:layout_constraintEnd_toEndOf="@+id/kotak2"
+        app:layout_constraintTop_toTopOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/kotak3"
+        android:layout_width="370dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kotak2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/kotak2"
+        app:layout_constraintTop_toBottomOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/kotak_terjemahan" />
+
+    <ImageView
+        android:id="@+id/kotak4"
+        android:layout_width="370dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/kotak3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/kotak3"
+        app:layout_constraintTop_toBottomOf="@+id/kotak3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/kotak_terjemahan" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutSource"
+        android:layout_width="313dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="2dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak3"
+        app:layout_constraintEnd_toEndOf="@+id/kotak3"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="@+id/kotak3"
+        app:layout_constraintTop_toTopOf="@+id/kotak3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextSource"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:hint="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTarget"
+        android:layout_width="311dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="2dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak4"
+        app:layout_constraintEnd_toEndOf="@+id/kotak4"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@+id/kotak4"
+        app:layout_constraintTop_toTopOf="@+id/kotak4"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextTarget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:padding="5dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:hint="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="360dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/ungu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_python2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn_kembali"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/kembali" />
+
+    <TextView
+        android:id="@+id/txt_python2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Terjemah"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kembali"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toEndOf="@+id/btn_kembali"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--  Navbar -->
+    <ImageView
+        android:id="@+id/kotak6"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kotak4"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/kotak_navbar" />
+
+    <ImageButton
+        android:id="@+id/btn_home_on"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="@+id/kotak6"
+        app:layout_constraintTop_toTopOf="@+id/kotak6"
+        app:srcCompat="@drawable/tbl_home_on" />
+
+    <ImageButton
+        android:id="@+id/btn_kuis"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_home_on"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toEndOf="@+id/btn_home_on"
+        app:layout_constraintTop_toTopOf="@+id/btn_home_on"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/tbl_kuis" />
+
+    <ImageButton
+        android:id="@+id/btn_riwayat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kuis"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/btn_kuis"
+        app:layout_constraintTop_toTopOf="@+id/btn_kuis"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tbl_riwayat" />
+
+    <ImageButton
+        android:id="@+id/btn_profil"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_riwayat"
+        app:layout_constraintEnd_toEndOf="@+id/kotak6"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/btn_riwayat"
+        app:layout_constraintTop_toTopOf="@+id/btn_riwayat"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tbl_profil" />
+
+
+    <ImageButton
+        android:id="@+id/btn_salin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak4"
+        app:layout_constraintEnd_toEndOf="@+id/kotak4"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="@+id/kotak4"
+        app:layout_constraintTop_toTopOf="@+id/kotak4"
+        app:layout_constraintVertical_bias="0.928"
+        app:srcCompat="@drawable/salin" />
+
+    <ImageButton
+        android:id="@+id/btn_salin2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/kotak3"
+        app:layout_constraintEnd_toEndOf="@+id/kotak3"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="@+id/kotak3"
+        app:layout_constraintTop_toBottomOf="@+id/kotak2"
+        app:layout_constraintVertical_bias="0.927"
+        app:srcCompat="@drawable/salin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
